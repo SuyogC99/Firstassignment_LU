@@ -1,2 +1,2 @@
 # Firstassignment_LU
-Its First assignment of Day-1
+# Day-1 Assignments
