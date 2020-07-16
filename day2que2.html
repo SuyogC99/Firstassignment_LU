@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <title>Day2 Assignment-2</title>
+<head>
+    <script>
+        //ARRAY METHODS
+        //array to string
+        let fruits = ["Banana", "Orange", "Apple", "Mango"];
+        a = fruits.toString();
+        console.log(a);
+        b = fruits.join("*");
+        console.log(b); 
+        //pop
+        console.log(fruits.pop());
+        //push
+        console.log(fruits.push("Strawberry"));
+        console.log(fruits);
+        //shift
+        console.log(fruits.shift());
+        //unshift
+        console.log(fruits.unshift("Lemon"));
+        console.log(fruits);
+        //indexes
+        console.log(fruits[0] = "Kiwi");
+        console.log(fruits);
+        // Appends Tomato to fruits
+        console.log(fruits[fruits.length] = "Tomato");
+        console.log(fruits);
+        //Changes the first element in fruits to undefined
+        console.log(delete fruits[4]);
+        console.log(fruits);
+        //Removes the first element of fruits
+        console.log(fruits.splice(0,1));
+        let abc = ["Banana", "Orange", "Apple", "Mango"];
+        console.log(abc.splice(2, 2, "Lemon", "Kiwi"));
+        console.log(abc);
+        //concat
+        arr = [1,2,3,4];
+        arr2 = [5,6,7,8];
+        console.log(arr.concat(arr2));
+
+        //STRING METHODS
+        //string length
+        let the = "abdajfahdgfafa";
+        console.log(the.length);
+        //indexOf finding a string in a string
+        let str = "Please locate where 'locate' occurs!";
+        console.log(str.indexOf("locate"));
+        //lastIndexOf
+        console.log(str.lastIndexOf("locate"));
+        //the search starts at position 12 and searches to the end of the string
+        console.log(str.indexOf("locate",12));
+        //the search starts at position 12 and searches to the beginning of the string
+        console.log(str.lastIndexOf("locate",12));
+        //slice
+        let c = "Apple, Banana, Kiwi";
+        console.log(c.slice(7, 13));
+
+        let d = "Apple, Banana, Kiwi";
+        console.log(d.slice(-12, -6));
+
+        console.log(d.slice(7));
+        //substring
+        let e = "Apple, Banana, Kiwi";
+        console.log(e.substring(7,13));
+        //substr
+        console.log(e.substr(7));
+        console.log(e.substr(-4));
+        //replace
+        str1 = "hello! how are you";
+        console.log(str1.replace("hello", "hi"));
+        //To replace case insensitive
+        str2 = "Hello! how are you";
+        console.log(str2.replace(/hello/i,"Hi"));
+        //To replace all matches
+        str3 = "Hello! how are you,Hello";
+        console.log(str3.replace(/Hello/g,"Hi"));
+        //uppercase
+        console.log(str3.toUpperCase());
+        //lowercase
+        console.log(str3.toLowerCase());
+        //concat
+        let text1 = "Hello"; 
+        let text2 = "World";
+        console.log(text1.concat(" ", text2));
+        let text = "Hello" + " " + "abc";
+        console.log(text = "Hello".concat(" ", "World!"));
+        //trim
+        let str4 = "       Hello World!        ";
+        alert(str4.trim());
+        //charat
+        let str5 = "HELLO WORLD";
+        console.log(str5.charAt(0));
+        //charCodeAt
+        console.log(str5.charCodeAt(0));
+        //property access
+        console.log(str5[0]);
+        //split(converting string to array)
+        let text3 = "H,e,l,l,o";
+        console.log(text3.split(",")); // Split on commas   
+        let text4 = "Hello"; 
+        console.log(text4.split("")); // Split in characters
+     
+
+        
+
+
+
+
+
+
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
