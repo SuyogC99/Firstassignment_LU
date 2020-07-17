@@ -7,11 +7,10 @@
   <body>
     <script>
       let b = prompt("Provide OS name");
-      let c = b.slice(7);
-      let d = b.slice(0,7);
-    console.log("The OS name is  " +d+ " and version is" +c+"" );
+      let c = b.toString().split();
+      let d = c.pop();
+      let e = c.pop();
+      console.log("The OS name is  " +e+ " and version is" +d+"" );
     </script>
   </body>
-  
 </html>
-  
