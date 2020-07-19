@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Day 4 Question-5</title>
+</head>
+<body>
+    <script>
+        let a = prompt("enter the total sales you have done in this year:");
+        let b = 15000;//total salary of employee
+        if(a = 0){
+            console.log("Your salary is " +b+ "");
+        }
+        else if(a > 0 && a <= 5000){
+            console.log("your comission is increased by 2%");
+            let c = (b * 2) / 100;
+            console.log("Your salary is " +(+b + +c )+ "");
+        }
+        else if(a > 5000 && a <= 10000){
+            console.log("your comission is increased by 5%");
+            let c = (b * 5) / 100;
+            console.log("Your salary is " +(+b + +c )+ "");
+        }
+        else if(a > 10000 && a <= 20000){
+            console.log("your comission is increased by 7%");
+            let c = (b * 7) / 100;
+            console.log("Your salary is " +(+b + +c )+ "");
+        }
+        else if(a > 20000){
+            console.log("your comission is increased by 10%");
+            let c = (b * 10) / 100;
+            console.log("Your salary is " +(+b + +c )+ "");
+        }
+        else{
+            console.log("Please provide correct sales");
+        }
+    </script>
+</body>
+</html>
