@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Day 4 Question-4 </title>
+</head>
+<body>
+    <script>
+        let c =  prompt("Enter the operation(+,-,*,/,sqrt,%) ");
+        if(c == "sqrt"){
+            let a =  prompt("Enter a number:");
+            console.log(Math.sqrt(a));
+        }
+        else if(c == "%"){
+            let a =  prompt("Enter a number in decimal:");
+            console.log(+a*100 + "%");
+        }
+        else{
+            let a =  prompt("Enter the first number:");
+            let b =  prompt("Enter the second number:");
+            if(c == "+"){
+                console.log(+a + +b);
+            }
+            else if(c == "-"){
+                console.log(+a - +b);
+            }
+            else if(c == "*"){
+                console.log(+a * +b);
+            }
+            else if(c == "/"){
+                console.log(+a / +b);
+            }
+            else{
+                console.log("Please provide correct operation");
+            }
+        }
+    </script>
+</body>
+</html>
