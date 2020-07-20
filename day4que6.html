@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Day 4 Question-6</title>
+</head>
+<body>
+    <script>
+        //do while
+
+        // let num;
+        // do {
+        //     num = prompt("Enter a number greater than 100?", 0);
+        // } while (num <= 100 && num);
+
+        //fun using ?
+
+        // function num(){
+        //     let a = prompt("Enter a number greater than 100?", 0);
+        //     return (a>=100) ? true : num();
+        // }
+        // num();
+
+        //fun using ||
+        function num(){
+            let a = prompt("Enter a number greater than 100?", 0);
+            return (a>=100) || num();
+        }
+        num();
+
+
+    </script>
+</body>
+</html>
