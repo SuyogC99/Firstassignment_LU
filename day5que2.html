@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Day 5 Question-2</title>
+</head>
+<body>
+    <script>
+        class user{
+            constructor(name,age,email){
+                this.name = name;
+                this.age = age;
+                this.email =email;
+                this.Coins = 0;
+                this.courses = [];
+            }
+            login(){
+                console.log(`${this.name} has logged in`);
+                return this;
+            }
+            logout(){
+                console.log(`${this.name} has logged out`);
+                return this;
+            }
+
+        }
+        class Moderator extends user{
+            constructor(name,age,email,role){
+                super(name,age,email);
+                this.role = role;
+            }
+            addCoins(user){
+                user.Coins++;
+                console.log(`${user.name} has ${user.Coins} coins`);
+                return this;
+            }
+            removeCoins(user){
+                user.Coins--;
+                console.log(`${user.name} has ${user.Coins} coins`);
+                return this;
+            }
+        }
+        class Admin extends Moderator{
+            addCourse(user,course){
+                user.courses.push(course);
+                console.log(user);
+             }
+            deleteCourse(user,course){    
+                let index = user.courses.indexOf(course);
+                if (index > -1) {
+                    user.courses.splice(index, 1);
+                }
+                console.log(user);
+            } 
+        } 
+        let user1 = new user('Pranay',21,'Pranay@gmail.com');
+        let user2 = new user('Bharat',21,'bharat@gmail.com');
+        let mod = new Moderator('Hemanth',21,'Hemanth@gmail.com','Moderator');
+        let admin = new Admin('Bhatta',22,'bhatta@gmail.com');
+        user1.login().logout();
+        mod.login().addCoins(user1).removeCoins(user1).logout();
+        mod.login().addCoins(user2).addCoins(user2).logout();
+        admin.addCourse(user1,'C++');
+        admin.addCourse(user1,'Javascript');
+        admin.deleteCourse(user1,'C++');
+
+    </script>
+</body>
+</html>
