@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Day 6 Question-1</title>
+</head>
+<body>
+    <p id="dark">Day 6 Question-1</p>
+    <script>
+        let i = 0;
+        function change(){
+        const dmode = document.getElementById('dark');
+        let array = ['black','white','blue','red','green','violet','pink'];
+            document.body.style.backgroundColor=array[i];
+            i=(i+1) % array.length;
+        }
+        setInterval(change,5000);
+    </script>
+</body>
+</html>
