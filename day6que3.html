@@ -1,0 +1,49 @@
+<!--JavaScript - Function to Display Table of an entered Number.-->
+<html>
+	<head>
+        <title>Day 6  Question-3</title>
+        <style>
+        body {
+            padding: 25px;
+            background-color: white;
+            color: black;
+            font-size: 25px;
+          }
+          
+          .darkmode {
+            background-color: black;
+            color: white;
+          }
+        </style>	
+	</head>
+    <body style="text-align: center;">
+        <p id ="prints" style = "font-size: medium; text-align: initial;" ></p>
+		<h1 style = "color: chocolate;">LetsUpgrade assignment</h1>
+		<p><input type="text" id="txtName" placeholder="Enter name"/></p>
+        <p><input type="button" value="Enter" onclick='name1()'/></p>
+        <p id ="print" style ="font-size: 25px; font-weight: bold; color: darkcyan;" ></p>
+        
+        <button onclick="Dark()">Toggle dark mode</button>
+            <script type="text/javascript">
+                function name1(){
+                    let num=String(document.getElementById('txtName').value);
+                    let ptag = document.getElementById("print");
+                    ptag.innerHTML=("Welcome " +num+ " to the Letsupgrade" ) + "<br/>" 
+                }
+                const caltime = document.getElementById('prints');
+                function clock(){
+                    let date = new Date();
+                    let odate = date.toDateString();
+                    let time = date.toLocaleTimeString();
+                    caltime.innerText = (`Date = ${odate} \n Time = ${time} `);
+                }
+                setInterval(clock,1000);
+                function Dark() {
+                    let element = document.body;
+                    element.classList.toggle("darkmode");
+                }
+
+            </script>
+	</body>
+
+</html>
