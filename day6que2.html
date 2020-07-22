@@ -4,13 +4,11 @@
     <title>Day 6 Question-2</title>
 </head>
 <body>
-    <p >Table</p>
-    <p id ="table"></p>
+    <p>Table</p>
     <script>
         let a =prompt('enter the number you want a table of that number');
         for(i=1;i<=10;i++){  
-            let ptag = document.getElementById('table');
-            ptag.innerHTML +=(`${a} x ${i} = ${a*i}  `) +"<br/>"
+            document.write(`${a} x ${i} = ${a*i} <br/> `)
         }
     </script>
 </body>
