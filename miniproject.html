@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stopwatch</title>
+    <style>
+        body {
+        padding: 25px;
+        background-color: white;
+        color: black;
+        font-size: 25px;
+      }
+      .darkmode {
+            background-color: black;
+            color: white;
+          }
+    </style>  
+<body style="text-align: center;" >
+    <h1 style="color:darkturquoise;">Stopwatch</h1>
+
+    <script>
+              
+        function name1(){
+            let num=String(document.getElementById('num').value);
+            let c = num.toString().split(':');
+            console.log(c)
+            seconds = c.pop();
+            minutes = c.pop();
+            hours = c.pop();
+            console.log(seconds--,minutes,hours);
+            let b= stopWatch();
+        }           
+    //Define vars to hold time values
+    let seconds = 0;
+    let minutes = 0;
+    let hours = 0;
+
+    let displaySeconds = 0;
+    let displayMinutes = 0;
+    let displayHours = 0;
+
+    //Define var to hold setInterval() function
+    let interval = null;
+
+    //Define var to hold stopwatch status
+    let status = "stopped";
+
+    //Stopwatch function (logic to determine when to increment next value, etc.)
+    function stopWatch(){
+        seconds++
+
+        //Logic to determine when to increment next value
+        if(seconds / 60 === 1){
+            seconds = 0;
+            minutes++;
+
+        if(minutes / 60 === 1){
+            minutes = 0;
+            hours++;
+        }
+
+    }
+    if(seconds<10){
+        displaySeconds = "0"+seconds;
+    }
+    else{
+    displaySeconds = seconds;
+    }
+    if(minutes<10){
+        displayMinutes = "0"+ Number(minutes);
+    }
+    else{
+    displayMinutes =minutes;
+    }
+    if(hours<10){
+        displayHours = "0"+ Number(hours);
+    }
+    else{
+    displayHours =hours;
+    }
+    //Display updated time values to user
+    document.getElementById("display").innerHTML = displayHours + ":" + displayMinutes + ":" + displaySeconds;
+}
+    function startStop(){ 
+    if(status === "stopped"){
+        //Start the stopwatch (by calling the setInterval() function)
+        interval = window.setInterval(stopWatch, 1000);
+        document.getElementById("startStop").innerHTML = "Stop";
+        status = "started";
+    }
+    else{
+
+        window.clearInterval(interval);
+        document.getElementById("startStop").innerHTML = "Start";
+        status = "stopped";       
+    }
+    let element=document.body;
+    element.classList.toggle("darkmode");
+}
+//Function to reset the stopwatch
+function reset(){
+
+    window.clearInterval(interval);
+    seconds = 0;
+    minutes = 0;
+    hours = 0;
+    document.getElementById("display").innerHTML = "00:00:00";
+    document.getElementById("startStop").innerHTML = "Start";
+}
+</script>
+</head>
+    <div class="container">
+        <input type = "text" id = "num" placeholder="00:00:00"></input>
+        <input type="button" value="Enter" onclick='name1()'/>
+    <p id="display" >
+            00:00:00
+        </button>
+        <div class="buttons" >
+            <button id="startStop" onclick="startStop()">Start</button> 
+            <button id="reset" onclick="reset()">Reset</button>
+
+        </div>
+    </div>
+</body>
+</html>
